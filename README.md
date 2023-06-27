@@ -36,6 +36,10 @@ Once the bot is running and invited to your server, you can interact with it usi
 
 Contributions to ModMailBot are welcome! If you find any issues or have suggestions for improvements, please feel free to open an issue or submit a pull request.
 
+## License
+
+This project is under [MIT License](LICENSE).
+
 ## Disclaimer
 
 ModMail Bot is a third-party application and is not affiliated with or endorsed by Discord. Use it at your own risk.
