@@ -1,5 +1,3 @@
-Certainly! Here's an example of a README file for the ModMailBot project:
-
 # ModMail Bot
 
 ModMail Bot is a Discord bot designed to simplify communication between server staff and users. It provides a streamlined and organized approach to handling user queries, support requests, and feedback.
