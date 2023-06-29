@@ -32,9 +32,9 @@ async def on_message(message):
             modmail_conversation = modmail_conversations.get(message.author.id)
 
             if modmail_conversation is None:
-                forums_category = discord.utils.get(guild.categories, name="Forums Category")
+                forums_category = discord.utils.get(guild.categories, name="ModMail")
                 if forums_category is None:
-                    forums_category = await guild.create_category("Forums Category")
+                    forums_category = await guild.create_category("ModMail")
 
                 modmail_channel_name = f"modmail-{message.author.id}"
                 modmail_channel = discord.utils.get(forums_category.channels, name=modmail_channel_name)
@@ -69,7 +69,7 @@ async def on_message(message):
 @commands.has_role("YOUR_ROLE_NAME")
 async def reply(ctx, *, content: str):
     modmail_channel = ctx.channel
-    if isinstance(modmail_channel, discord.TextChannel) and modmail_channel.category and modmail_channel.category.name == "Forums Category":
+    if isinstance(modmail_channel, discord.TextChannel) and modmail_channel.category and modmail_channel.category.name == "ModMail":
         modmail_conversation = None
         for conversation in modmail_conversations.values():
             if conversation["channel"] == modmail_channel:
