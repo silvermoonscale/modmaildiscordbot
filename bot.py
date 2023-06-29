@@ -35,6 +35,7 @@ async def on_message(message):
                 forums_category = discord.utils.get(guild.categories, name="ModMail")
                 if forums_category is None:
                     forums_category = await guild.create_category("ModMail")
+                    await forums_category.set_permissions(guild.default_role, view_channel=False)
 
                 modmail_channel_name = f"modmail-{message.author.id}"
                 modmail_channel = discord.utils.get(forums_category.channels, name=modmail_channel_name)
